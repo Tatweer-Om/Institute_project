@@ -23,7 +23,7 @@ class EnrolController extends Controller
 
         if (!Auth::check()) {
 
-            return redirect()->route('login_page')->with('error', 'Please LogIn first()');
+            return redirect()->route('login_page')->with('error', trans('messages.please_log_in', [], session('locale')));
         }
 
         $user = Auth::user();
@@ -33,7 +33,7 @@ class EnrolController extends Controller
             return view('enroll.enroll', compact('courses', 'students'));
         } else {
 
-            return redirect()->route('home')->with('error', 'You dont have Permission');
+            return redirect()->route('/')->with('error', trans('messages.you_dont_have_permissions', [], session('locale')));
         }
     }
 
@@ -151,18 +151,13 @@ class EnrolController extends Controller
     public function show_enroll(Request $request)
     {
 
-
-
-
         $sno = 0;
         $courseId = '';
         $view_course = '';
 
-        $courseId = $request->input('course_id'); // Retrieve course_id from the request
+        $courseId = $request->input('course_id');
 
-        // Perform query filtering by course_id if needed
         if ($courseId) {
-            // Example query to get enrollments filtered by course_id
             $view_course = Enrollment::where('course_id', $courseId)->get();
         } else {
             $view_course = Enrollment::all();
@@ -207,21 +202,23 @@ class EnrolController extends Controller
                 $json[] = array(
                     $sno,
 
-                    '<span class="student_name">Student Name: ' . $full_name  . '</span><br>' . // Span for student name
-                        '<span class="student_number">Phone Number: ' . $student->student_number . '</span><br>' . // Span for student number
-                        '<span class="civil_number">Civil Number: ' . $student->civil_number . '</span>', // Span for civil number
-                    '<span class="course_name">Course Name: ' . $course_name . '</span><br>' . // Span for course name
-                        ($offer_name ? '<span class="offer_name">Offer Name: ' . $offer_name . '</span><br>' : '') . // Span for offer name if not empty
-                        '<span class="teacher">Teacher: ' . $teacher . '</span>', // Span for teacher
+                    '<span class="student_name">' . trans('messages.student_name') . ': ' . $full_name  . '</span><br>' . // Span for student name
+                        '<span class="student_number">' . trans('messages.phone_number') . ': ' . $student->student_number . '</span><br>' . // Span for student number
+                        '<span class="civil_number">' . trans('messages.civil_number') . ': ' . $student->civil_number . '</span>', // Span for civil number
 
-                    '<span class="discount">Discount: ' . $value->total_discount . ' %</span><br>' . // Span for discount
-                        '<span class="course_price">Course Price: ' . $value->course_price . '</span><br>' . // Span for course price
-                        '<span class="discounted_price">Discounted Price: ' . $value->discounted_price . '</span>', // Span for discounted price
+                    '<span class="course_name">' . trans('messages.course_name') . ': ' . $course_name . '</span><br>' . // Span for course name
+                        ($offer_name ? '<span class="offer_name">' . trans('messages.offer_name') . ': ' . $offer_name . '</span><br>' : '') . // Span for offer name if not empty
+                        '<span class="teacher">' . trans('messages.teacher') . ': ' . $teacher . '</span>', // Span for teacher
 
-                    '<span class="added_by">Added By: ' . $value->added_by . '</span><br>' . // Span for who added it
-                        '<span class="add_date">Added On: ' . $add_data . '</span>', // Span for date added
+                    '<span class="discount">' . trans('messages.discount') . ': ' . $value->total_discount . ' %</span><br>' . // Span for discount
+                        '<span class="course_price">' . trans('messages.course_price') . ': ' . $value->course_price . '</span><br>' . // Span for course price
+                        '<span class="discounted_price">' . trans('messages.discounted_price') . ': ' . $value->discounted_price . '</span>', // Span for discounted price
+
+                    '<span class="added_by">' . trans('messages.added_by') . ': ' . $value->added_by . '</span><br>' . // Span for who added it
+                        '<span class="add_date">' . trans('messages.added_on') . ': ' . $add_data . '</span>', // Span for date added
                     $modal
                 );
+
             }
 
 
@@ -239,6 +236,7 @@ class EnrolController extends Controller
             echo json_encode($response);
         }
     }
+
 
     public function add_enroll(Request $request)
     {

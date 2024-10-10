@@ -144,38 +144,6 @@ function formatDate(date) {
     return yyyy + '-' + mm + '-' + dd;
 }
 
-// Function to get the start and end dates for different time ranges
-// function getDates(timeRange) {
-//     var endDate = new Date();
-//     var startDate;
-
-//     switch (timeRange) {
-//         case '0':
-//             startDate = new Date(endDate);
-//             startDate.setDate(endDate.getDate() - 7);
-//             break;
-//         case '1':
-//             startDate = new Date(endDate.getFullYear(), endDate.getMonth() - 1, 1);
-//             endDate = new Date(endDate.getFullYear(), endDate.getMonth(), 0);
-//             break;
-//         case '2':
-//             startDate = new Date(endDate.getFullYear(), endDate.getMonth() - 1, 1);
-//             endDate = new Date(endDate.getFullYear(), endDate.getMonth(), 0);
-
-//             break;
-//         case '3':
-//             startDate = new Date(endDate.getFullYear() - 1, endDate.getMonth(), 1);
-//             break;
-//         default:
-//             break;
-//     }
-
-//     return {
-//         start: formatDate(startDate),
-//         end: formatDate(endDate)
-//     };
-// }
-
 
 
 function setDates(period) {

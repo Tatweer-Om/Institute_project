@@ -44,7 +44,7 @@ class ReportController extends Controller
 
         if (!Auth::check()) {
 
-            return redirect()->route('login_page')->with('error', 'Please LogIn first()');
+            return redirect()->route('login_page')->with('error', trans('messages.please_log_in', [], session('locale')));
         }
 
         $user = Auth::user();
@@ -54,7 +54,8 @@ class ReportController extends Controller
             return view('reports.income_report', compact('sdate', 'edate', 'about', 'report_name', 'total_expense', 'total_income', 'total_student', 'profit'));
         } else {
 
-            return redirect()->route('home')->with('error', 'You dont have Permission');
+             return redirect()->route('/')->with('error', trans('messages.you_dont_have_permissions', [], session('locale')));
+
         }
         // Pass data to the view
     }
@@ -94,7 +95,7 @@ class ReportController extends Controller
 
         if (!Auth::check()) {
 
-            return redirect()->route('login_page')->with('error', 'Please LogIn first()');
+            return redirect()->route('login_page')->with('error', trans('messages.please_log_in', [], session('locale')));
         }
 
         $user = Auth::user();
@@ -104,7 +105,8 @@ class ReportController extends Controller
             return view('reports.course_icome_report', compact('sdate', 'courses', 'course',  'edate', 'about', 'report_name', 'total_income', 'total_student'));
         } else {
 
-            return redirect()->route('home')->with('error', 'You dont have Permission');
+             return redirect()->route('/')->with('error', trans('messages.you_dont_have_permissions', [], session('locale')));
+
         }
 
         // Pass data to the view
@@ -163,7 +165,7 @@ class ReportController extends Controller
 
         if (!Auth::check()) {
 
-            return redirect()->route('login_page')->with('error', 'Please LogIn first()');
+            return redirect()->route('login_page')->with('error', trans('messages.please_log_in', [], session('locale')));
         }
 
         $user = Auth::user();
@@ -173,7 +175,8 @@ class ReportController extends Controller
             return view('reports.all_courses_income', compact('sdate', 'edate', 'about', 'report_name', 'courses_data'));
         } else {
 
-            return redirect()->route('home')->with('error', 'You dont have Permission');
+             return redirect()->route('/')->with('error', trans('messages.you_dont_have_permissions', [], session('locale')));
+
         }
 
         // Pass data to the view

@@ -314,5 +314,10 @@ return [
 'added_on' => 'تاريخ الإضافة',
 'course_price' => 'سعر الدورة',
 'course_dates' => 'تواريخ الدورة',
+'courses'=>'الدورات',
+'please_log_in' => 'يرجى تسجيل الدخول أولاً',
+'you_dont_have_permissions' => 'ليس لديك الصلاحيات',
+
+
 
 ];

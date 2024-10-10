@@ -13,7 +13,7 @@ class ExpenseCategoryController extends Controller
 
             if (!Auth::check()) {
 
-                return redirect()->route('login_page')->with('error', 'Please LogIn first()');
+                return redirect()->route('login_page')->with('error', trans('messages.please_log_in', [], session('locale')));
             }
 
             $user = Auth::user();
@@ -23,7 +23,8 @@ class ExpenseCategoryController extends Controller
                 return view ('expense.expensecat');
             } else {
 
-                return redirect()->route('home')->with( 'error', 'You dont have Permission');
+
+            return redirect()->route('/')->with('error', trans('messages.you_dont_have_permissions', [], session('locale')));
             }
 
 

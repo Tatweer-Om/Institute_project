@@ -12,19 +12,18 @@ class AccountController extends Controller
     public function index(){
 
         if (!Auth::check()) {
-
-            return redirect()->route('login_page')->with('error', 'Please LogIn first()');
+            return redirect()->route('login_page')->with('error', trans('messages.please_log_in', [], session('locale')));
         }
 
         $user = Auth::user();
 
         if (in_array(5, explode(',', $user->permit_type))) {
-
             return view('accounts.account');
         } else {
+             return redirect()->route('/')->with('error', trans('messages.you_dont_have_permissions', [], session('locale')));
 
-            return redirect()->route('home')->with( 'error', 'You dont have Permission');
         }
+
 
 
         // } else {

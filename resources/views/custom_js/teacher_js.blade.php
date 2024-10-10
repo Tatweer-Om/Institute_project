@@ -15,17 +15,17 @@
          });
 
          $('#all_course_teacher').DataTable({
-            destroy: true, // Reset the table on initialization
-            "processing": true, // Show a processing indicator
-            "serverSide": true, // Enable server-side processing
-            "pagingType": 'numbers', // Pagination style
-            "ordering": true, // Enable column ordering
-            "bFilter": true, // Enable filtering
+            destroy: true,
+            "processing": true,
+            "serverSide": true,
+            "pagingType": 'numbers',
+            "ordering": true,
+            "bFilter": true,
             "ajax": {
-                "url": "{{ url('show_teacher_courses') }}", // Use Blade syntax for Laravel URL
+                "url": "{{ url('show_teacher_courses') }}",
                 "type": "GET",
                 "data": function(d) {
-                    d.teacher_id = $('.teacher_id').val(); // Send the selected course_id in the request
+                    d.teacher_id = $('.teacher_id').val();
                 }
             }
         });

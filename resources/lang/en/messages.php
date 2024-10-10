@@ -305,6 +305,8 @@ return [
 'teacher_number_lang' => 'Teacher Number',
 'teacher_email_lang' => 'Teacher Email',
 'civil_number_lang' => 'Civil Number',
+'please_log_in'=>'PLease Log In First',
+'you_dont_have_permissions' => 'You don\'t have permissions',
 
 
 'dashboard' => 'Dashboard',
@@ -323,6 +325,12 @@ return [
 'added_on' => 'Added On',
 'course_price' => 'Course Price',
 'course_dates' => 'Course Dates',
+'courses'=>'Courses',
+'discount'=>'Discount',
+'phone_number'=>'Phone Number',
+'offer_name'=>'Offer Name',
+
+
 
 'hours' => 'Hours',
 'start_time' => 'Start Time',

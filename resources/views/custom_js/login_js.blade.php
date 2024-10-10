@@ -28,7 +28,7 @@
             },
             success: function(response) {
                 if (response.status === 1) {
-                    window.location.href = '/home';
+                    window.location.href = '/';
                     show_notification('success', 'تم تسجيل الدخول بنجاح');
                 } else {
                     show_notification('error', 'خطأ في تسجيل الدخول');

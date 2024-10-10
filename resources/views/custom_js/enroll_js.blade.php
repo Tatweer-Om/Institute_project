@@ -1,14 +1,7 @@
 <script>
     $(document).ready(function() {
 
-        // $('#all_enroll').DataTable({
-        //     "sAjaxSource": "{{ url('show_enroll') }}",
-        //     "bFilter": true,
-        //     'pagingType': 'numbers',
-        //     "ordering": true,
-        // });
 
-        // function initializeDataTable(courseId = null) {
         $('#all_enroll').DataTable({
             destroy: true, // Reset the table on initialization
             "processing": true, // Show a processing indicator
@@ -24,8 +17,8 @@
                 }
             }
         });
-    // }
-    // initializeDataTable();
+
+
 
 
 
@@ -198,8 +191,8 @@
                             <div class="flex-grow-1">
                                 <div>
                                     <h5 class="font-size-14 mb-1">${offer.offer_name}</h5> <!-- Assuming the offer has a 'name' field -->
-                                     <p class="font-size-13 text-muted mb-0">Courses: ${courses}</p>
-                                    <p class="font-size-13 text-muted mb-0">Discount: ${offer.offer_discount}%</p> <!-- Assuming the offer has a 'discount' field -->
+                                     <p class="font-size-13 text-muted mb-0">{{ trans('messages.courses', [], session('locale')) }}: ${courses}</p>
+                                    <p class="font-size-13 text-muted mb-0">{{ trans('messages.discount', [], session('locale')) }}: ${offer.offer_discount}%</p> <!-- Assuming the offer has a 'discount' field -->
                                 </div>
                             </div>
                         </div>

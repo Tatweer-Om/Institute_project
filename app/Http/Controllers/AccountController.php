@@ -54,14 +54,12 @@ class AccountController extends Controller
                         <i class="fas fa-trash" title="Edit"></i>
                     </a>';
                 $add_data=get_date_only($value->created_at);
-                if($value->account_type)
-                {
-                    $account_type='Normal Account';
+                if($value->account_type) {
+                    $account_type = trans('accounts.normal_account', [], session('locale'));
+                } else {
+                    $account_type = trans('accounts.saving_account', [], session('locale'));
                 }
-                else
-                {
-                    $account_type='Saving Account';
-                }
+
                 $sno++;
                 $json[] = array(
                     // $sno,

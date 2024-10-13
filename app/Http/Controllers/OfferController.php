@@ -73,17 +73,17 @@ class OfferController extends Controller
                 $sno++;
                 $json[] = array(
                     $sno,
-                    '<span>Offer Name : ' . $offer_name . '</span><br>' .
-                    '<span> Course : ' . $course_names . '</span> <br>' ,
-                    '<span> Start Date: ' . $value->start_date . '</span><br>' .
-                    '<span> End Date: ' . $value->end_date . '</span><br>' .
-                    '<span> Offer Discount: ' . ($value->offer_discount ? $value->offer_discount . '%' : 'N/A') . '</span>',
+                    '<span>' . trans('messages.offer_name', [], session('locale')) . ': ' . $offer_name . '</span><br>' .
+                    '<span>' . trans('messages.course', [], session('locale')) . ': ' . $course_names . '</span><br>',
+                    '<span>' . trans('messages.start_date', [], session('locale')) . ': ' . $value->start_date . '</span><br>' .
+                    '<span>' . trans('messages.end_date', [], session('locale')) . ': ' . $value->end_date . '</span><br>' .
+                    '<span>' . trans('messages.offer_discount', [], session('locale')) . ': ' . ($value->offer_discount ? $value->offer_discount . '%' : trans('messages.na', [], session('locale'))) . '</span>',
                     '<span style="text-align: justify; white-space: pre-line;">' . $value->notes . '</span>',
-                    '<span>أضيف بواسطة: ' . $value->added_by . '</span><br>' .
-                    '<span>تاريخ الإضافة: ' . $add_data . '</span>',
-
+                    '<span>' . trans('messages.added_by', [], session('locale')) . ': ' . $value->added_by . '</span><br>' .
+                    '<span>' . trans('messages.added_date', [], session('locale')) . ': ' . $add_data . '</span>',
                     $modal
                 );
+
 
 
             }

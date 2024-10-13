@@ -385,7 +385,7 @@
                         @if(in_array(10, $permissions))
                         <li>
                             <a href="javascript: void(0);" class="has-arrow">
-                                <i data-feather="grid"></i>
+                                <i data-feather="users"></i>
                                 <span data-key="t-apps">{{ trans('messages.student',[],session('locale')) }}</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
@@ -400,7 +400,7 @@
                         @if(in_array(7, $permissions))
                         <li>
                             <a href="{{ url('teacher') }}">
-                                <i data-feather="home"></i>
+                                <i data-feather="users"></i>
                                 <span data-key="t-dashboard">{{ trans('messages.teacher_lang',[],session('locale')) }}</span>
                             </a>
                         </li>
@@ -409,7 +409,7 @@
                         <li>
 
                             <a href="javascript: void(0);" class="has-arrow">
-                                <i data-feather="grid"></i>
+                                <i data-feather="life-buoy"></i>
                                 <span data-key="t-apps">{{ trans('messages.menu_course_lang',[],session('locale')) }}</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
@@ -426,7 +426,7 @@
                         @if(in_array(3, $permissions))
                         <li>
                             <a href="{{ url('enrol') }}">
-                                <i data-feather="home"></i>
+                                <i data-feather="layers"></i>
                                 <span data-key="t-dashboard">{{ trans('messages.menu_enrollments_lang',[],session('locale')) }}</span>
                             </a>
                         </li>
@@ -434,7 +434,7 @@
                         @if(in_array(5, $permissions))
                         <li>
                             <a href="javascript: void(0);" class="has-arrow">
-                                <i data-feather="grid"></i>
+                                <i data-feather="hard-drive"></i>
                                 <span data-key="t-apps">{{ trans('messages.menu_expense_lang',[],session('locale')) }}</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
@@ -461,7 +461,7 @@
                         @if(in_array(6, $permissions))
                         <li>
                             <a href="javascript: void(0);" class="has-arrow">
-                                <i data-feather="grid"></i>
+                                <i data-feather="user"></i>
                                 <span data-key="t-apps">{{ trans('messages.menu_user_lang',[],session('locale')) }}</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
@@ -477,7 +477,7 @@
                         @if(in_array(9, $permissions))
                         <li>
                             <a href="javascript: void(0);" class="has-arrow">
-                                <i data-feather="grid"></i>
+                                <i data-feather="inbox"></i>
                                 <span data-key="t-apps">{{ trans('messages.sms_panel_lang',[],session('locale')) }}</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
@@ -493,7 +493,7 @@
                         @if(in_array(8, $permissions))
                         <li>
                             <a href="{{ url('setting') }}">
-                                <i data-feather="home"></i>
+                                <i data-feather="settings"></i>
                                 <span data-key="t-dashboard">{{ trans('messages.menu_setting_lang',[],session('locale')) }}</span>
                             </a>
                         </li>
@@ -503,7 +503,7 @@
                         <li>
 
                             <a href="javascript: void(0);" class="has-arrow">
-                                <i data-feather="grid"></i>
+                                <i data-feather="award"></i>
                                 <span data-key="t-apps">{{ trans('messages.menu_offers_lang',[],session('locale')) }}</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
@@ -521,7 +521,7 @@
                         <li>
 
                             <a href="javascript: void(0);" class="has-arrow">
-                                <i data-feather="grid"></i>
+                                <i data-feather="archive"></i>
                                 <span data-key="t-apps">{{ trans('messages.reports',[],session('locale')) }}</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
@@ -540,6 +540,23 @@
                                         <span data-key="t-calendar">{{ trans('messages.all_courses_income_report',[],session('locale')) }}</span>
                                     </a>
                                 </li>
+
+
+                            </ul>
+                        </li>
+                        <li>
+
+                            <a href="javascript: void(0);" class="has-arrow">
+                                <i data-feather="grid"></i>
+                                <span data-key="t-apps">{{ trans('messages.winlos',[],session('locale')) }}</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li>
+                                    <a href="{{ url('winlos') }}">
+                                        <span data-key="t-calendar">{{ trans('messages.winlos_report',[],session('locale')) }}</span>
+                                    </a>
+                                </li>
+
 
 
                             </ul>

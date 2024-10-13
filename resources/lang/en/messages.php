@@ -387,5 +387,39 @@ return [
     'student_profile_lang' => 'Student Profile',
 
 
+    'winlos'=>'Trade Win Loss',
+    'total_trade' => 'Total Trade',
+    'win_percentage' => 'Win Percentage',
+    'loss_percentage' => 'Loss Percentage',
+    'added_by' => 'Added By',
+    'actions_lang' => 'Actions',
+    'normal_account' => 'Normal Account',
+    'saving_account' => 'Saving Account',
+
+    'course_name' => 'Course Name',
+    'teacher_name' => 'Teacher Name',
+    'original_price' => 'Original Price',
+    'discounted_price' => 'Discounted Price',
+    'course_duration' => 'Course Duration',
+    'start_date' => 'Start Date',
+    'end_date' => 'End Date',
+    'start_time' => 'Start Time',
+    'end_time' => 'End Time',
+    'duration' => 'Duration',
+    'notes' => 'Notes',
+    'added_by' => 'Added By',
+    'added_date' => 'Added Date',
+    'offer_name' => 'Offer Name',
+    'course' => 'Course',
+    'start_date' => 'Start Date',
+    'end_date' => 'End Date',
+    'offer_discount' => 'Offer Discount',
+    'notes' => 'Notes',
+    'added_by' => 'Added By',
+    'added_date' => 'Added Date',
+    'na' => 'N/A',
+
+
+
 ];
 ?>

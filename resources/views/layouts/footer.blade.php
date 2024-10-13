@@ -282,6 +282,8 @@
     @include('custom_js.report_js')
     @elseif ($controllerName == 'all_courses_income')
     @include('custom_js.report_js')
+    @elseif ($controllerName == 'winlos')
+    @include('custom_js.winlos_js')
 @endif
 
 

@@ -97,22 +97,22 @@ class CourseController extends Controller
                 $sno++;
                 $json[] = array(
                     $sno,
-                    '<span> Course Name: ' . $course_name . '</span><br>' .
-                    '<span> Teacher Name: ' . $teacher . '</span><br>' .
-                    '<span> Original Price: ' . $value->course_price . '</span><br>' .
-                    ($discounted_price !== null ? '<span> Discounted Price: ' . $discounted_price . '</span>' : ''),
-                    '<span> Course Duration: ' . $durationMonths . ' months</span><br>' .
-                    '<span> Start Date: ' . $value->start_date . '</span><br>' .
-                    '<span> End Date: ' . $value->end_date . '</span><br>' .
-                    '<span> Start Time: ' . date("g:i A", strtotime($value->start_time)) . '</span><br>' .
-                    '<span> End Time: ' . date("g:i A", strtotime($value->end_time)) . '</span><br>' .
-                    '<span> Duration: ' . $durationHours . ' hours ' . $durationMinutes . ' minutes</span>',
+                    '<span>' . trans('messages.course_name', [], session('locale')) . ': ' . $course_name . '</span><br>' .
+                    '<span>' . trans('messages.teacher_name', [], session('locale')) . ': ' . $teacher . '</span><br>' .
+                    '<span>' . trans('messages.original_price', [], session('locale')) . ': ' . $value->course_price . '</span><br>' .
+                    ($discounted_price !== null ? '<span>' . trans('messages.discounted_price', [], session('locale')) . ': ' . $discounted_price . '</span>' : ''),
+                    '<span>' . trans('messages.course_duration', [], session('locale')) . ': ' . $durationMonths . ' months</span><br>' .
+                    '<span>' . trans('messages.start_date', [], session('locale')) . ': ' . $value->start_date . '</span><br>' .
+                    '<span>' . trans('messages.end_date', [], session('locale')) . ': ' . $value->end_date . '</span><br>' .
+                    '<span>' . trans('messages.start_time', [], session('locale')) . ': ' . date("g:i A", strtotime($value->start_time)) . '</span><br>' .
+                    '<span>' . trans('messages.end_time', [], session('locale')) . ': ' . date("g:i A", strtotime($value->end_time)) . '</span><br>' .
+                    '<span>' . trans('messages.duration', [], session('locale')) . ': ' . $durationHours . ' hours ' . $durationMinutes . ' minutes</span>',
                     '<span style="text-align: justify; white-space: pre-line;">' . $value->notes . '</span>',
-                    '<span>أضيف بواسطة: ' . $value->added_by . '</span><br>' .
-                    '<span>تاريخ الإضافة: ' . $add_data . '</span>',
-
+                    '<span>' . trans('messages.added_by', [], session('locale')) . ': ' . $value->added_by . '</span><br>' .
+                    '<span>' . trans('messages.added_date', [], session('locale')) . ': ' . $add_data . '</span>',
                     $modal
                 );
+
             }
 
 

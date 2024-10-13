@@ -18,6 +18,7 @@ use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\EnrolController;
 use App\Http\Controllers\ExpenseCategoryController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\WinnLosController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -155,3 +156,14 @@ Route::post('add_student2', [EnrolController::class, 'add_student2'])->name('add
 Route::match(['get', 'post'], 'income_report', [ReportController::class, 'income_report'])->name('income_report');
 Route::match(['get', 'post'], 'course_income_report', [ReportController::class, 'course_income_report'])->name('course_income_report');
 Route::match(['get', 'post'], 'all_courses_income', [ReportController::class, 'all_courses_income'])->name('all_courses_income');
+
+
+
+//winloss
+
+Route::match(['get', 'post'], 'winlos', [WinnLosController::class, 'index'])->name('winlos');
+Route::post('add_winlos', [WinnLosController::class, 'add_winlos'])->name('add_winlos');
+Route::get('show_winlos', [WinnLosController::class, 'show_winlos'])->name('show_winlos');
+Route::post('edit_winlos', [WinnLosController::class, 'edit_winlos'])->name('edit_winlos');
+Route::post('update_winlos', [WinnLosController::class, 'update_winlos'])->name('update_winlos');
+Route::post('delete_winlos', [WinnLosController::class, 'delete_winlos'])->name('delete_winlos');

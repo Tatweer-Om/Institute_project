@@ -283,22 +283,19 @@ class StudentController extends Controller
                 $sno++;
                 $json[] = array(
                     $sno,
-
-                    '<span class="student_name">Student Name: ' . $student->full_name . '</span><br>' . // Span for student name
-                    '<span class="student_number">Phone Number: ' . $student->student_number . '</span><br>' . // Span for student number
-                    '<span class="civil_number">Civil Number: ' . $student->civil_number . '</span>', // Span for civil number
-                    '<span class="course_name">Course Name: ' . $course_name . '</span><br>' . // Span for course name
-                    ($offer_name ? '<span class="offer_name">Offer Name: ' . $offer_name . '</span><br>' : '') . // Span for offer name if not empty
-                    '<span class="teacher">Teacher: ' . $teacher . '</span>', // Span for teacher
-
-                    '<span class="discount">Discount: ' . $value->total_discount . ' %</span><br>' . // Span for discount
-                    '<span class="course_price">Course Price: ' . $value->course_price . '</span><br>' . // Span for course price
-                    '<span class="discounted_price">Discounted Price: ' . $value->discounted_price . '</span>', // Span for discounted price
-
-                    '<span class="added_by">Added By: ' . $value->added_by . '</span><br>' . // Span for who added it
-                    '<span class="add_date">Added On: ' . $add_data . '</span>', // Span for date added
-
+                    '<span class="student_name">' . trans('messages.student_name', [], session('locale')) . ': ' . $student->full_name . '</span><br>' .
+                    '<span class="student_number">' . trans('messages.phone_number', [], session('locale')) . ': ' . $student->student_number . '</span><br>' .
+                    '<span class="civil_number">' . trans('messages.civil_number', [], session('locale')) . ': ' . $student->civil_number . '</span>',
+                    '<span class="course_name">' . trans('messages.course_name', [], session('locale')) . ': ' . $course_name . '</span><br>' .
+                    ($offer_name ? '<span class="offer_name">' . trans('messages.offer_name', [], session('locale')) . ': ' . $offer_name . '</span><br>' : '') .
+                    '<span class="teacher">' . trans('messages.teacher', [], session('locale')) . ': ' . $teacher . '</span>',
+                    '<span class="discount">' . trans('messages.discount', [], session('locale')) . ': ' . $value->total_discount . '%</span><br>' .
+                    '<span class="course_price">' . trans('messages.course_price', [], session('locale')) . ': ' . $value->course_price . '</span><br>' .
+                    '<span class="discounted_price">' . trans('messages.discounted_price', [], session('locale')) . ': ' . $value->discounted_price . '</span>',
+                    '<span class="added_by">' . trans('messages.added_by', [], session('locale')) . ': ' . $value->added_by . '</span><br>' .
+                    '<span class="add_date">' . trans('messages.added_date', [], session('locale')) . ': ' . $add_data . '</span>',
                 );
+
 
             }
 

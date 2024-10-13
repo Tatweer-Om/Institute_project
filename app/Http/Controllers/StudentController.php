@@ -64,17 +64,17 @@ class StudentController extends Controller
                 $sno++;
                 $json[] = array(
                     $sno,
-                    '<span>اسم العميل: ' . $student_name . '</span><br>' .
-                    '<span>الجنس: ' . ($value->gender == 1 ? 'ذكر' : 'أنثى') . '</span><br>' .
-                    '<span>تاريخ الميلاد: ' . $value->dob . '</span><br>' .
-                    '<span> Civil Number: ' . $value->civil_number . '</span>',
+                    '<span>' . trans('messages.student_name', [], session('locale')) . ': ' . $student_name . '</span><br>' .
+                    '<span>' . trans('messages.gender', [], session('locale')) . ': ' . ($value->gender == 1 ? trans('messages.male') : trans('messages.female')) . '</span><br>' .
+                    '<span>' . trans('messages.dob', [], session('locale')) . ': ' . $value->dob . '</span><br>' .
+                    '<span>' . trans('messages.civil_number', [], session('locale')) . ': ' . $value->civil_number . '</span>',
 
                     $value->student_number . '<br>' . $value->student_email,
 
                     '<span style="text-align: justify; white-space: pre-line;">' . $value->notes . '</span>',
 
-                    '<span>أضيف بواسطة: ' . $value->added_by . '</span><br>' .
-                    '<span>تاريخ الإضافة: ' . $add_data . '</span>',
+                    '<span>' . trans('messages.added_by', [], session('locale')) . ': ' . $value->added_by . '</span><br>' .
+                    '<span>' . trans('messages.added_on', [], session('locale')) . ': ' . $add_data . '</span>',
 
                     $modal
                 );
@@ -177,10 +177,12 @@ class StudentController extends Controller
             return response()->json(['error' => trans('messages.student_not_found', [], session('locale'))], 404);
         }
 
+        $full_name = $request['first_name'] . ' ' . $request['second_name'] . ' ' . $request['last_name'];
 
         $student->first_name = $request['first_name'];
         $student->second_name = $request['second_name'];
         $student->last_name = $request['last_name'];
+        $student->full_name = $full_name;
         $student->civil_number = $request['civil_number'];
         $student->student_number = $request['student_number'];
         $student->student_email = $request['student_email'];

@@ -95,7 +95,7 @@
                                 </select>
                             </div>
                             <div class="col-lg-4">
-                               <a class="btn btn-success" data-bs-toggle="modal" data-bs-target="#add_student_modal">{{ trans('messages.add_student',[],session('locale')) }}</a>
+                               <a type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#add_student_modal">{{ trans('messages.add_student',[],session('locale')) }}</a>
                             </div>
                         </div>
 

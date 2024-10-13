@@ -45,13 +45,8 @@
                                                         <span class="d-none d-sm-block"> {{ trans('messages.about_company',[],session('locale')) }}</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" data-bs-toggle="tab" href="#setting2" role="tab">
-                                                        <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                                        <span class="d-none d-sm-block">  {{ trans('messages.dress_avail_lang',[],session('locale')) }}</span>
-                                                    </a>
-                                                </li>
-                                                 
+
+
                                             </ul>
                                         </div>
                                     </div><!-- end card header -->
@@ -139,7 +134,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
 
                                             <!-- Second Tab Pane -->
                                             <div class="tab-pane fade" id="setting2" role="tabpanel">

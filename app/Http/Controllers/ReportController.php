@@ -150,7 +150,7 @@ class ReportController extends Controller
 
             // Store the course data, ensure teacher information exists before accessing
             $courses_data[] = [
-                'course_name' => $course->name, // Assuming 'name' is the course name column
+                'course_name' => $course->course_name, // Assuming 'name' is the course name column
                 'total_income' => $total_income,
                 'total_students' => $total_students,
                 'start_date' => $course->start_date,

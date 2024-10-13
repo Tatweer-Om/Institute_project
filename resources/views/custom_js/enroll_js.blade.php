@@ -210,20 +210,11 @@
         $('.add_student').off().on('submit', function(e){
             e.preventDefault();
             var formdatas = new FormData($('.add_student')[0]);
-            var title=$('.student_name').val();
-            var number=$('.student_number').val();
+
+
             var id=$('.student_id').val();
 
-                if(title=="" )
-                {
-                    show_notification('error','<?php echo trans('messages.add_student_name_lang',[],session('locale')); ?>'); return false;
 
-                }
-
-                if(number=="" )
-                {
-                    show_notification('error','<?php echo trans('messages.add_student_phone_lang',[],session('locale')); ?>'); return false;
-                }
                 $('#global-loader').show();
                 before_submit();
                 var str = $(".add_student").serialize();

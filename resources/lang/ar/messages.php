@@ -322,6 +322,29 @@ return [
 'win_percentage' => 'نسبة المكسب',
 'loss_percentage' => 'نسبة الخسارة',
 'added_by' => 'أضيف بواسطة',
+'first_name_lang' => 'الاسم الأول', // First Name
+'second_name_lang' => 'الاسم الثاني', // Second Name
+'last_name_lang' => 'اسم العائلة', // Last Name
+'civil_number_lang' => 'رقم الهوية', // Civil Number
+'teacher_number_lang' => 'رقم المعلم', // Teacher Number
+'teacher_email_lang' => 'البريد الإلكتروني للمعلم', // Teacher Email
+'notes_lang' => 'ملاحظات', // Notes
+'signature_lang' => 'التوقيع', // Signature
+'clear_signature' => 'مسح التوقيع', // Clear Signature
+
+'first_name_lang' => 'الاسم الأول', // First Name
+'second_name_lang' => 'الاسم الثاني', // Second Name
+'last_name_lang' => 'اسم العائلة', // Last Name
+'civil_number_lang' => 'رقم الهوية', // Civil Number
+'student_number_lang' => 'رقم الطالب', // Student Number
+'student_email_lang' => 'البريد الإلكتروني للطالب', // Student Email
+'dob_lang' => 'تاريخ الميلاد', // Date of Birth
+'male_lang' => 'ذكر', // Male
+'female_lang' => 'أنثى', // Female
+'notes_lang' => 'ملاحظات', // Notes
+'teacher_number_lang' => 'هاتف المعلم', // Teacher Phone
+'teacher_email_lang' => 'البريد الإلكتروني للمعلم', // Teacher Email
+
 
     'normal_account' => 'حساب عادي',
     'saving_account' => 'حساب توفير',
@@ -361,6 +384,26 @@ return [
     'added_date' => 'تاريخ الإضافة',
 
 
+    'permissions_lang' => 'الأذونات',
+    'all' => 'الكل',
+    'checkbox_course' => 'الدورات',
+    'checkbox_enrollments' => 'التسجيلات',
+    'checkbox_reports' => 'التقارير',
+    'checkbox_expense' => 'المصروفات',
+    'checkbox_user' => 'المستخدم',
+    'teacher' => 'المعلم',
+    'setting_lang' => 'الإعدادات',
+    'sms_lang' => 'الرسائل النصية',
+    'student' => 'الطالب',
+    'offers' => 'العروض',
+    'student_name' => 'اسم الطالب',
+    'gender' => 'الجنس',
+    'male' => 'ذكر',
+    'female' => 'أنثى',
+    'dob' => 'تاريخ الميلاد',
+    'civil_number' => 'الرقم المدني',
+    'added_by' => 'أضيف بواسطة',
+    'added_on' => 'تاريخ الإضافة',
 
 
 

@@ -73,7 +73,10 @@
                                     <thead>
                                         <tr class="bg-transparent">
                                             <th style="width: 50px; text-align:center;">{{ trans('messages.sr_no', [], session('locale')) }}</th> <!-- New Sr. No. column -->
+
                                             <th style="width: 120px; text-align:center;">{{ trans('messages.total_students', [], session('locale')) }}</th>
+                                            <th style="width: 120px; text-align:center;">{{ trans('messages.course_name', [], session('locale')) }}</th>
+
                                             <th style="width: 120px; text-align:center;">{{ trans('messages.total_income', [], session('locale')) }}</th>
                                             <th style="width: 120px; text-align:center;">{{ trans('messages.duration', [], session('locale')) }}</th>
                                             <th style="width: 120px; text-align:center;">{{ trans('messages.teacher', [], session('locale')) }}</th>
@@ -85,6 +88,7 @@
                                             <tr>
                                                 <td style="width: 50px; text-align:center;">{{ $loop->iteration }}</td> <!-- Display Sr. No. -->
                                                 <td style="width: 120px; text-align:center;">{{ $course['total_students'] ?? 0 }}</td>
+                                                <td style="width: 120px; text-align:center;">{{ $course['course_name'] ?? 0 }}</td>
                                                 <td style="width: 120px; text-align:center;">{{ $course['total_income'] ?? 0 }}</td>
                                                 <td style="width: 120px; text-align:center;">{{ trans('messages.start_date', [], session('locale')) }}: {{ $course['start_date'] ?? '' }} <br>{{ trans('messages.end_date', [], session('locale')) }}: {{ $course['end_date'] ?? '' }}</td>
                                                 <td style="width: 120px; text-align:center;">{{ $course['teacher'] ?? '' }}</td>

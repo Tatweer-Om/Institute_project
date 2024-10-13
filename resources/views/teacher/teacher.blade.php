@@ -97,19 +97,19 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="mb-3">
-                                    <label for="civil_number" class="form-label">{{ trans('messages.civil_number_lang ',[],session('locale')) }}</label>
+                                    <label for="civil_number" class="form-label">{{ trans('messages.civil_number',[],session('locale')) }}</label>
                                     <input class="form-control civil_number isnumber" name="civil_number" type="text" id="civil_number">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="mb-3">
-                                    <label for="teacher_number" class="form-label">{{ trans('messages.teacher_number_lang ',[],session('locale')) }}</label>
+                                    <label for="teacher_number" class="form-label">{{ trans('messages.teacher_number',[],session('locale')) }}</label>
                                     <input class="form-control teacher_number isnumber" name="teacher_number" type="text" id="teacher_number">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="mb-3">
-                                    <label for="teacher_email" class="form-label">{{ trans('messages.teacher_email_lang ',[],session('locale')) }}</label>
+                                    <label for="teacher_email" class="form-label">{{ trans('messages.teacher_email',[],session('locale')) }}</label>
                                     <input class="form-control teacher_email" name="teacher_email" type="text" id="teacher_email">
                                 </div>
                             </div>
@@ -127,10 +127,11 @@
                                     <label for="signature" class="form-label">{{ trans('messages.signature_lang', [], session('locale')) }}</label>
                                     <canvas id="signature-pad" class="signature-pad" width="300" height="100" style="border: 1px solid #000;"></canvas>
                                     <br>
-                                    <button id="clear-signature" class="btn btn-warning">Clear Signature</button>
+                                    <button type="button" id="clear-signature" class="btn btn-warning">{{ trans('messages.clear_signature', [], session('locale')) }}</button>
                                     <input type="hidden" name="signature" id="signature" class="form-control">
                                 </div>
                             </div>
+
 
                         </div>
 

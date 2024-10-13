@@ -15,17 +15,17 @@
          });
 
          $('#all_course_teacher').DataTable({
-            destroy: true,
-            "processing": true,
-            "serverSide": true,
-            "pagingType": 'numbers',
-            "ordering": true,
-            "bFilter": true,
+            destroy: true, // Reset the table on initialization
+            "processing": true, // Show a processing indicator
+            "serverSide": true, // Enable server-side processing
+            "pagingType": 'numbers', // Pagination style
+            "ordering": true, // Enable column ordering
+            "bFilter": true, // Enable filtering
             "ajax": {
-                "url": "{{ url('show_teacher_courses') }}",
+                "url": "{{ url('show_teacher_courses') }}", // Use Blade syntax for Laravel URL
                 "type": "GET",
                 "data": function(d) {
-                    d.teacher_id = $('.teacher_id').val();
+                    d.teacher_id = $('.teacher_id').val(); // Send the selected course_id in the request
                 }
             }
         });
@@ -138,10 +138,47 @@
     });
 
 
-    function loadSignature(signatureData) {
-    const canvas = document.getElementById('signature-pad');
-    const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
 
+const canvas = document.getElementById('signature-pad');
+const ctx = canvas.getContext('2d');
+
+// Set up canvas for drawing
+canvas.addEventListener('mousedown', (e) => {
+    isDrawing = true;
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+});
+
+canvas.addEventListener('mousemove', (e) => {
+    if (!isDrawing) return;
+    ctx.strokeStyle = '#000'; // Black color for signature
+    ctx.lineWidth = 2; // Adjust line width as needed
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+});
+
+canvas.addEventListener('mouseup', () => {
+    isDrawing = false;
+    ctx.closePath();
+});
+
+canvas.addEventListener('mouseout', () => {
+    isDrawing = false;
+});
+
+// Clear signature
+document.getElementById('clear-signature').addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    document.getElementById('signature').value = ''; // Clear the hidden input
+});
+
+// Function to load the signature image
+function loadSignature(signatureData) {
     // Clear the canvas before drawing
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -155,6 +192,13 @@
     // Set the source of the image to the signature data
     img.src = signatureData; // This should be the path or base64 data of the signature
 }
+
+// Optionally, you can add a function to get the signature data in base64
+function saveSignature() {
+    const signatureDataUrl = canvas.toDataURL(); // Gets the signature data as base64
+    document.getElementById('signature').value = signatureDataUrl; // Save to hidden input
+}
+
 
     function edit(id){
         $('#global-loader').show();

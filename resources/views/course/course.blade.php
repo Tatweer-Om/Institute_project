@@ -80,7 +80,7 @@
 
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="course_name" class="form-label">{{ trans('messages.course_name_lang',[],session('locale')) }}</label>
+                                    <label for="course_name" class="form-label">{{ trans('messages.course_name',[],session('locale')) }}</label>
                                     <input class="form-control course_name" name="course_name" type="text" id="course_name">
                                 </div>
                             </div>
@@ -99,31 +99,31 @@
 
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="start_date" class="form-label">{{ trans('messages.start_date_lang ',[],session('locale')) }}</label>
+                                    <label for="start_date" class="form-label">{{ trans('messages.start_date_lang',[],session('locale')) }}</label>
                                     <input class="form-control start_date datepick" name="start_date" type="text" id="start_date">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="end_date" class="form-label">{{ trans('messages.end_date_lang ',[],session('locale')) }}</label>
+                                    <label for="end_date" class="form-label">{{ trans('messages.end_date_lang',[],session('locale')) }}</label>
                                     <input class="form-control end_date datepick" name="end_date" type="text" id="end_date">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="start_time" class="form-label">{{ trans('messages.start_time_lang ',[],session('locale')) }}</label>
+                                    <label for="start_time" class="form-label">{{ trans('messages.start_time_lang',[],session('locale')) }}</label>
                                     <input type="time" class="form-control start_time" name="start_time" type="text" id="start_time">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="end_time" class="form-label">{{ trans('messages.end_time_lang ',[],session('locale')) }}</label>
+                                    <label for="end_time" class="form-label">{{ trans('messages.end_time_lang',[],session('locale')) }}</label>
                                     <input type="time" class="form-control end_time" name="end_time" type="text" id="end_time">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="course_price" class="form-label">{{ trans('messages.course_price_lang ',[],session('locale')) }}</label>
+                                    <label for="course_price" class="form-label">{{ trans('messages.course_price',[],session('locale')) }}</label>
                                     <input class="form-control course_price isnumber" name="course_price" id="course_price">
                                 </div>
                             </div>

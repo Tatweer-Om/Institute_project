@@ -108,9 +108,14 @@
                                 <img src="{{ asset('images/logo-sm.svg') }}" alt="" height="10">
                             </span>
                             <span class="logo-lg">
-                                <img src="{{ $about->logo ? asset('images/logo/' . $about->logo) : asset('images/logo-sm.svg') }}" alt="" height="10">
+                                @if ($about && $about->logo)
+                                    <img src="{{ asset('images/logo/' . $about->logo) }}" alt="" height="10">
+                                @else
+                                    <img src="{{ asset('images/logo-sm.svg') }}" alt="" height="10">
+                                @endif
                                 <span style="font-size: 12px" class="logo-txt">{{ $about->company_name ?? '' }}</span>
                             </span>
+
                         </a>
 
                         <a href="index.html" class="logo logo-light">
@@ -118,9 +123,14 @@
                                 <img src="{{ asset('images/logo-sm.svg') }}" alt="" height="10">
                             </span>
                             <span class="logo-lg">
-                                <img src="{{ $about->logo ? asset('images/logo/' . $about->logo) : asset('images/logo-sm.svg') }}" alt="" height="10">
-                                <span class="logo-txt" style="font-size: 12px">{{ $about->company_name ?? '' }}</span>
+                                @if ($about && $about->logo)
+                                    <img src="{{ asset('images/logo/' . $about->logo) }}" alt="" height="10">
+                                @else
+                                    <img src="{{ asset('images/logo-sm.svg') }}" alt="" height="10">
+                                @endif
+                                <span style="font-size: 12px" class="logo-txt">{{ $about->company_name ?? '' }}</span>
                             </span>
+
                         </a>
                     </div>
 

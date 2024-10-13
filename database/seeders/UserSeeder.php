@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
             'user_phone' => '1234567890',
             'password' => bcrypt('1234'),
             'user_detail' => 'Admin details here',
-            'permit_type' => '2,3,4,5,6,7,8,9,10','11',
+            'permit_type' => '2,3,4,5,6,7,8,9,10,11',
             'user_id' => '1',
         ]);
     }

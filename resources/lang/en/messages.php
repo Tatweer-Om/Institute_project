@@ -279,6 +279,8 @@ return [
 'courses_lang' => 'Courses',
 'course_id_lang' => 'Course ID - ',
 'teacher_name_lang' => 'Teacher Name',
+'teacher_number'=>'Teacher Phone',
+'teacher_email'=>'Teacher Email',
 'start_date_lang' => 'Start Date',
 'end_date_lang' => 'End Date',
 'start_time_lang' => 'Start Time',
@@ -302,9 +304,7 @@ return [
 'teachers_other_details_lang' => 'Teacher\'s Other Details',
 
 'teacher_id_lang' => 'Teacher ID',
-'teacher_number_lang' => 'Teacher Number',
-'teacher_email_lang' => 'Teacher Email',
-'civil_number_lang' => 'Civil Number',
+
 'please_log_in'=>'PLease Log In First',
 'you_dont_have_permissions' => 'You don\'t have permissions',
 
@@ -359,9 +359,30 @@ return [
 'course_detail' => 'Course Detail',
 'price_detail' => 'Price Detail',
 'added_by' => 'Added By',
+'first_name_lang' => 'First Name',
+'second_name_lang' => 'Second Name',
+'last_name_lang' => 'Last Name',
+
+
+
+'notes_lang' => 'Notes',
+'signature_lang' => 'Signature',
+'clear_signature' => 'Clear Signature',
 'action' => 'Action',
 'add_student_lang' => 'Add Student',
 'close_lang' => 'Close',
+'first_name_lang' => 'First Name',
+'second_name_lang' => 'Second Name',
+'last_name_lang' => 'Last Name',
+
+
+
+'dob' => 'Date of Birth',
+'male_lang' => 'Male',
+'female_lang' => 'Female',
+'notes_lang' => 'Notes',
+
+
 
 'course_id_lang' => 'Course ID',
 'choose_lang' => 'Choose...',
@@ -376,9 +397,9 @@ return [
 
 
     'student_id_lang' => 'Student ID',
-    'student_number_lang' => 'Student Number',
-    'student_email_lang' => 'Student Email',
-    'civil_number_lang' => 'Civil Number',
+
+
+
     'students_other_details_lang' => 'Student\'s Other Details',
     'total_courses_lang' => 'Total Courses',
     'total_income_lang' => 'Total Income',
@@ -419,7 +440,32 @@ return [
     'added_date' => 'Added Date',
     'na' => 'N/A',
 
+    'permissions_lang' => 'Permissions',
+    'all' => 'All',
+    'checkbox_course' => 'Courses',
+    'checkbox_enrollments' => 'Enrollments',
+    'checkbox_reports' => 'Reports',
+    'checkbox_expense' => 'Expense',
+    'checkbox_user' => 'User',
+    'teacher' => 'Teacher',
+    'setting_lang' => 'Settings',
+    'sms_lang' => 'SMS',
+    'student' => 'Student',
+    'offers' => 'Offers',
+    'panel_choose_lang' => 'Choose Status',
+    'panel_student_enrolled_lang' => 'Student Enrolled',
+    'teacher_time_lang' => 'Teacher Time',
+    'student_time_lang' => 'Student Time',
 
+    'student_name' => 'Student Name',
+    'gender' => 'Gender',
+    'male' => 'Male',
+    'female' => 'Female',
+    'dob' => 'Date of Birth',
+    'civil_number' => 'Civil Number',
+    'added_by' => 'Added By',
+    'added_on' => 'Added On',
+    'about_company'=>'About Company',
 
 ];
 ?>

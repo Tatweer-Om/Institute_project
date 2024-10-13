@@ -43,9 +43,9 @@
                                 <label for="validationCustom04">{{ trans('messages.panel_available_msg_lang', [], session('locale')) }}:</label>
                                 <select class="form-control sms_status" name="status" id="sms_status">
                                     <option value="">{{ trans('messages.panel_choose_lang', [], session('locale')) }}</option>
-                                    <option value="1">{{ trans('messages.panel_customer_add_lang', [], session('locale')) }}</option>
-                                    <option value="10">{{ trans('messages.panel_add_offer_lang', [], session('locale')) }}</option>
-                                    <option value="14">{{ trans('messages.panel_birthday_wish_lang', [], session('locale')) }}</option>
+                                    <option value="1">{{ trans('messages.panel_student_enrolled_lang', [], session('locale')) }}</option>
+                                    <option value="10">{{ trans('messages.teacher_time_lang', [], session('locale')) }}</option>
+                                    <option value="14">{{ trans('messages.student_time_lang', [], session('locale')) }}</option>
                                 </select>
                             </div>
                             <br>

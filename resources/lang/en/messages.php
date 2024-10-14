@@ -466,6 +466,14 @@ return [
     'added_by' => 'Added By',
     'added_on' => 'Added On',
     'about_company'=>'About Company',
+    'latest_courses'=>'Latest Courses',
+    'category_name_lang'=>'Expense Category',
+    'total_trade_lang'=>'Total Signals',
+    'win_lang'=>'Profit',
+    'loss_lang'=>'Loss',
+    'percentage_win_lang'=>'Percentage Profit',
+    'percentage_los_lang'=>'Percentage Loss',
+    'winlos_report'=>'Profit Loss',
 
 ];
 ?>

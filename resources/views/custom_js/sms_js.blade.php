@@ -25,11 +25,11 @@
     });
 
     $(".customer_name").click(function () {
-        $(".sms_area").val((index, value) => value + '{customer_name}');
+        $(".sms_area").val((index, value) => value + '{student_name}');
     });
 
-    $(".customer_number").click(function () {
-        $(".sms_area").val((index, value) => value + '{customer_number}');
+    $(".student_number").click(function () {
+        $(".sms_area").val((index, value) => value + '{student_number}');
     });
 
     $(".invoice_link").click(function () {
@@ -37,20 +37,20 @@
     });
 
 
-    $(".transaction_no").click(function () {
-        $(".sms_area").val((index, value) => value + '{transaction_no}');
+    $(".teacher_name").click(function () {
+        $(".sms_area").val((index, value) => value + '{teacher_name}');
     });
 
     $(".product_name").click(function () {
         $(".sms_area").val((index, value) => value + '{product_name}');
     });
 
-    $(".receive_date").click(function () {
-        $(".sms_area").val((index, value) => value + '{receive_date}');
+    $(".teacher_number").click(function () {
+        $(".sms_area").val((index, value) => value + '{teacher_number}');
     });
 
-    $(".delivery_date").click(function () {
-        $(".sms_area").val((index, value) => value + '{delivery_date}');
+    $(".course_name").click(function () {
+        $(".sms_area").val((index, value) => value + '{course_name}');
     });
 
     $(".status").click(function () {
@@ -60,7 +60,6 @@
     $(".serial_no").click(function () {
         $(".sms_area").val((index, value) => value + '{serial_no}');
     });
-
 
     $(".receipt_date").click(function () {
         $(".sms_area").val((index, value) => value + '{receipt_date}');

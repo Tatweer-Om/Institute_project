@@ -197,7 +197,7 @@ return [
 'add_student' => 'إضافة طالب',
 'sms_panel_lang' => 'لوحة الرسائل القصيرة',
 'add_sms_lang' => 'إضافة رسالة قصيرة',
-'teacher_lang' => 'المعلمين',
+'teacher_lang' => 'المدربين',
 'menu_setting_lang' => 'الإعدادات',
 'menu_offers_lang' => 'العروض',
 'menu_add_offer_lang' => 'إضافة عرض',
@@ -317,7 +317,7 @@ return [
 'courses'=>'الدورات',
 'please_log_in' => 'يرجى تسجيل الدخول أولاً',
 'you_dont_have_permissions' => 'ليس لديك الصلاحيات',
-'winlos' => 'تداول المكسب والخسارة',
+'winlos' =>  'التوصيات',
 'total_trade' => 'إجمالي التداول',
 'win_percentage' => 'نسبة المكسب',
 'loss_percentage' => 'نسبة الخسارة',
@@ -404,6 +404,16 @@ return [
     'civil_number' => 'الرقم المدني',
     'added_by' => 'أضيف بواسطة',
     'added_on' => 'تاريخ الإضافة',
+    'latest_courses' => 'أحدث الدورات',
+    'category_name_lang' => 'فئة المصاريف',
+    'win_lang' => 'الربح',
+    'loss_lang' => 'الخسارة',
+    'percentage_win_lang' => 'نسبة الربح',
+    'percentage_los_lang' => 'نسبة الخسارة',
+    'winlos_report' => 'التوصيات',
+
+
+
 
 
 

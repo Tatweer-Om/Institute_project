@@ -242,25 +242,25 @@
 
                             <div class="col-md-3">
                                 <div class="mb-3">
-                                    <label for="civil_number" class="form-label">{{ trans('messages.civil_number_lang ',[],session('locale')) }}</label>
+                                    <label for="civil_number" class="form-label">{{ trans('messages.civil_number',[],session('locale')) }}</label>
                                     <input class="form-control civil_number isnumber" name="civil_number" type="text" id="civil_number">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="mb-3">
-                                    <label for="student_number" class="form-label">{{ trans('messages.student_number_lang ',[],session('locale')) }}</label>
+                                    <label for="student_number" class="form-label">{{ trans('messages.student_number',[],session('locale')) }}</label>
                                     <input class="form-control student_number isnumber" name="student_number" type="text" id="student_number">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="mb-3">
-                                    <label for="student_email" class="form-label">{{ trans('messages.student_email_lang ',[],session('locale')) }}</label>
+                                    <label for="student_email" class="form-label">{{ trans('messages.student_email',[],session('locale')) }}</label>
                                     <input class="form-control student_email" name="student_email" type="text" id="student_email">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="mb-3">
-                                    <label for="dob" class="form-label">{{ trans('messages.dob_lang ',[],session('locale')) }}</label>
+                                    <label for="dob" class="form-label">{{ trans('messages.dob',[],session('locale')) }}</label>
                                     <input class="form-control dob datepick" name="dob" type="text" id="dob">
                                 </div>
                             </div>
@@ -271,13 +271,13 @@
                                      <div class="form-check mb-3">
                                         <input class="form-check-input" type="radio" value="1" name="gender" id="male" checked="">
                                         <label class="form-check-label" for="male">
-                                            {{ trans('messages.male_lang ',[],session('locale')) }}
+                                            {{ trans('messages.male_lang',[],session('locale')) }}
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" value="2" name="gender" id="female">
                                         <label class="form-check-label" for="female">
-                                            {{ trans('messages.female_lang ',[],session('locale')) }}
+                                            {{ trans('messages.female_lang',[],session('locale')) }}
                                         </label>
                                     </div>
                                 </div>

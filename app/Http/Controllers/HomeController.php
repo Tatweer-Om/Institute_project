@@ -29,6 +29,7 @@ class HomeController extends Controller
 
         $course_count = Course::count();
         $student_count = Student::count();
+
         $user_count = User::count();
         $teacher_count = Teacher::count();
         $enrollment_count = Enrollment::count(); // Removed redundant assignment

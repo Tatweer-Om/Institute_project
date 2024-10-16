@@ -45,7 +45,7 @@
                                 <div class="col-6">
                                     <span class="text-muted mb-3 lh-1 d-block text-truncate">{{ trans('messages.total_students', [], session('locale')) }}</span>
                                     <h4 class="mb-3">
-                                        <span class="counter-value" data-target="{{ $studen_count ?? '' }}"></span>
+                                        <span class="counter-value" data-target="{{ $student_count ?? '' }}"></span>
                                     </h4>
                                 </div>
 

@@ -24,7 +24,7 @@
         });
     });
 
-    $(".customer_name").click(function () {
+    $(".student_name").click(function () {
         $(".sms_area").val((index, value) => value + '{student_name}');
     });
 
@@ -32,18 +32,21 @@
         $(".sms_area").val((index, value) => value + '{student_number}');
     });
 
-    $(".invoice_link").click(function () {
-        $(".sms_area").val((index, value) => value + '{invoice_link}');
+    $(".start_time").click(function () {
+        $(".sms_area").val((index, value) => value + '{start_time}');
     });
-
+    $(".end_time").click(function () {
+        $(".sms_area").val((index, value) => value + '{end_time}');
+    });
+    $(".company").click(function () {
+        $(".sms_area").val((index, value) => value + '{company}');
+    });
 
     $(".teacher_name").click(function () {
         $(".sms_area").val((index, value) => value + '{teacher_name}');
     });
 
-    $(".product_name").click(function () {
-        $(".sms_area").val((index, value) => value + '{product_name}');
-    });
+
 
     $(".teacher_number").click(function () {
         $(".sms_area").val((index, value) => value + '{teacher_number}');

@@ -19,6 +19,8 @@ return [
     'total_income' => 'Total Income',
     'total_expense' => 'Total Expense',
     'total_profit' => 'Total Profit',
+    'setting'=>'Settings',
+    'company'=>'Company',
 
 
     'sr_no' => 'Sr. No.',

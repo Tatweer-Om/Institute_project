@@ -9,7 +9,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\AccountController;
-
+use App\Http\Controllers\CronJobController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\StudentController;
@@ -23,6 +23,7 @@ use App\Http\Controllers\WinnLosController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('getAndSendEmails', [CronJobController::class, 'getAndSendEmails'])->name('getAndSendEmails');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/switch-language/{locale}', [HomeController::class, 'switchLanguage'])->name('switch_language');
 // category dress

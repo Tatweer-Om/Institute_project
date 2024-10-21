@@ -89,6 +89,15 @@
                                 <div class="form-row">
                                     <p style="text-decoration: none;cursor: pointer;" class="text text-success end_date">{{ trans('messages.end_date_lang', [], session('locale')) }}</p>
                                 </div>
+                                <div class="form-row">
+                                    <p style="text-decoration: none;cursor: pointer;" class="text text-success start_time">{{ trans('messages.start_time_lang', [], session('locale')) }}</p>
+                                </div>
+                                <div class="form-row">
+                                    <p style="text-decoration: none;cursor: pointer;" class="text text-success end_time">{{ trans('messages.end_time_lang', [], session('locale')) }}</p>
+                                </div>
+                                <div class="form-row">
+                                    <p style="text-decoration: none;cursor: pointer;" class="text text-success company">{{ trans('messages.company', [], session('locale')) }}</p>
+                                </div>
 
 
 

@@ -4,8 +4,8 @@
 
         $('#all_enroll').DataTable({
             destroy: true, // Reset the table on initialization
-            "processing": true, // Show a processing indicator
-            "serverSide": true, // Enable server-side processing
+            // "processing": true, // Show a processing indicator
+            // "serverSide": true, // Enable server-side processing
             "pagingType": 'numbers', // Pagination style
             "ordering": true, // Enable column ordering
             "bFilter": true, // Enable filtering
@@ -120,6 +120,15 @@
 
         // On course selection change
  $('select[name="course_id"]').first().change(function() {
+            $('#start_date').text("");
+            $('#end_date').text("");
+            $('#start_time').text("");
+            $('#end_time').text("");
+            $('#course_price').text("");
+            $('#discounted_price').text("");
+            $('#duration_months').text("");
+            $('#duration_hours').text("");
+            $('#teacher').text("");
             var courseId = $(this).val();
             // get_id(courseId);
             $('#all_enroll').DataTable().ajax.reload();
@@ -150,6 +159,12 @@
 
         // On student selection change
         $('select[name="student_id"]').last().change(function() {
+            $('#email').text("");
+            $('#phone').text("");
+            $('#full_name').text("");
+            $('#civil_number').text("");
+            $('#phone').text("");
+            $('#dob').text("");
             var studentId = $(this).val();
             if (studentId) {
                 $.ajax({
